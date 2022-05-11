@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>*****CheckerBoard!*****</h1>
+        </header>
+        <main>
+            {% for x in range(rows) %}
+            <div class="row1">
+                {% for y in range(columns) %}
+                <div class="urcolor"style="background-color:{{color1}};"></div>
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </main>
+    </div>
+</body>
+
+</html>
